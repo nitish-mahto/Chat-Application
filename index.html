@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="title">
+          <img
+            src="https://www.vhv.rs/dpng/d/417-4171168_whatsapp-logo-download-logo-whatsapp-icon-png-transparent.png"
+            alt=""
+            width="35px"
+          />
+          <h1>Nitish Talk</h1>
+        </div>
+
+        <button type="button" onclick="show_hide()">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAMFBMVEX///8AAAAbGxsFBQXs7OwsLCzd3d2RkZFJSUn09PR4eHgJCQl7e3spKSkZGRmVlZVcdwaoAAABPElEQVR4nO3aUY6CUBBFQUBQUEb2v9uRj4kS+aNjm56qHdz4UJDTNAAAAAAAAAAAAHyV/jJ2p/bDTt249KEzpuvt0yP+3OYpbsf5J2vGajiH7bhn7mjbe9CSKfXzWA0xp+uavaNt54gdfdp1/nSL+O66ZK9YLQFDxuwRqzFgSJc9YtUFDPn47/mekyFPZY5WmYt9yR6xivj6LfOD2MzZM4JuUZppyN4RdNOYfhvfxT2QpH4mcQ9Wj9M113jUfeiXEn8+AAAAAN9K+XCU8mFvh/IhiPJho8yLHuVDJOXDizLBQJkhZY5WmYtd+RBI+bChfIiifHinfDhG+QAAAAD/h/LhKOXD3g7lQxDlw0aZFz3Kh0jKhxdlgoEyQ8ocrTIXu/IhkPJhQ/kQRfnwTvlwjPIBAAAAAAAAAABofgGwHShFdzZNTgAAAABJRU5ErkJggg=="
+            alt=""
+            width="50px"
+          />
+        </button>
+      </header>
+
+      <div class="container">
+        <div class="users-window">
+          <div class="users-head">
+            <h3>People</h3>
+            <h4 class="users-count">3</h4>
+          </div>
+
+          <div class="users-list">
+            <!-- <p>Nitish</p> -->
+          </div>
+        </div>
+
+        <div class="chat-window">
+          <div class="chats">
+            
+          </div>
+          <div class="user-input">
+            <input
+              type="text"
+              name=""
+              id="user-msg"
+              placeholder="Type your message..."
+            />
+            <button type="button" id="user-send">SEND</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      var uwindow = document.querySelector(".users-window");
+      function show_hide() {
+        if (uwindow.style.display == "block") {
+          uwindow.style.display = "none";
+        } else {
+          uwindow.style.display = "block";
+        }
+      }
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+  </body>
+</html>
